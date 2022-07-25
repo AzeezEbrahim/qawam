@@ -1,0 +1,226 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: #002541;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+a,
+button:hover,
+a:hover,
+a:focus,
+button:focus,
+input:focus,
+.form-control:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+  outline: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  background-color: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 4px solid;
+}
+
+/*-- footer css start here now --*/
+section.coming-soon{
+    padding-right: 0;
+  }
+  
+.coming-soon {
+  padding: 50px 5% 110px 5%;
+  background: #141414;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.coming-logo img {
+  width: 100%;
+  max-width: 67px;
+}
+.about-compy {
+  padding-top: 40px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.about-compy h3 {
+  font-weight: 600;
+  color: #fff;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+.about-compy p {
+  color: #fff;
+  width: 100%;
+  max-width: 521px;
+  font-weight: 400;
+  margin-bottom: 33px;
+}
+.about-compy form {
+  display: flex;
+  width: 100%;
+  max-width: 521px;
+  margin-bottom: 47px;
+}
+
+
+
+.about-compy.about-compy input.form-control {
+  background: rgba(215, 220, 231, 0.2) !important;
+  border: 0 !important;
+  margin-right: 23px !important;
+  width: 100% !important;
+  max-width: 338px !important;
+  height: 48px;
+  border-radius: 14px !important;
+  color: #b3bcd0 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  padding: 0 20px !important;
+}
+.about-compy.about-compy input[type="submit"] {
+  background: #2a6aff !important;
+  border: 1px solid #2a6aff !important;
+  height: 48px !important;
+  width: 100% !important;
+  padding: 8px 40px !important;
+  border-radius: 14px !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  transition: all 0.5s !important;
+  -webkit-transition: all 0.5s !important;
+  -moz-transition: all 0.5s !important;
+  -ms-transition: all 0.5s !important;
+  -o-transition: all 0.5s !important;
+}
+.about-compy.about-compy input[type="submit"]:hover {
+  background: #fff !important;
+  color: #5286ff !important;
+  border-color: #fff !important;
+}
+.about-compy .row {
+  align-items: center;
+}
+.about-compy ul {
+  display: flex;
+  align-items: center;
+}
+.about-compy ul li a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 25px;
+  transition: all 0.5s;
+}
+.about-compy ul li a:hover {
+  color: #5286ff;
+}
+.coming-img {
+  text-align: right;
+}
+.coming-img img {
+  width: 60%;
+  height: auto;
+  padding: 10px 10px;
+  text-align: right;
+}
+.coming-logo {
+  width: 100%;
+}
+div#mc_embed_signup_scroll {
+  display: flex;
+  width: 100%;
+}
+#mc_embed_signup form {
+  padding: 0 !important;
+}
+.back-home {
+  padding: 2rem 0;
+  color: #051e5a;
+  font-size: 13px;
+  line-height: 50%;   
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 992px) {
+  .coming-img img {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .coming-img img {
+    width: 100%;
+  }
+  .coming-soon {
+    overflow: auto;
+  }
+  .coming-soon {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .coming-soon {
+    padding: 35px 22px 60px;
+    height: 100%;
+  }
+  .about-compy {
+    padding-top: 60px;
+  }
+  .about-compy h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .about-compy p {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .about-compy form {
+    max-width: 100%;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+  }
+  .about-compy.about-compy input.form-control {
+    margin-right: 0 !important;
+    max-width: 100% !important;
+  }
+  .about-compy.about-compy input[type="submit"] {
+    max-width: 100% !important;
+    margin-top: 18px !important;
+  }
+  .about-compy ul {
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  div#mc_embed_signup_scroll {
+    display: block;
+    width: 100%;
+  }
+  .coming-img img {
+    width: 95%;
+  }
+  .coming-soon {
+    overflow: auto;
+  }
+}

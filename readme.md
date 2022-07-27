@@ -1,9 +1,8 @@
+  [![Twitter Follow](https://img.shields.io/twitter/follow/azeeez_ebrahim?style=social)](https://twitter.com/intent/follow?screen_name=azeeez_ebrahim)
+
 <div align="center">
 
-    [![Twitter Follow](https://img.shields.io/twitter/follow/azeeez_ebrahim?style=social)](https://twitter.com/intent/follow?screen_name=azeeez_ebrahim)
 
-  <br />
-  <br /> 
   <h2 align="center">Qawam - static website</h2>
 
   Qawam is a fully responsive dental website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
@@ -14,12 +13,9 @@
 
 <br />
 
-
-
-
 ## Demo
 
-![Qawam Desktop Demo](./qawam.png "Desktop Demo")
+![Qawam Desktop Demo](./Qawam.png "Desktop Demo")
 
 ## Prerequisites
 

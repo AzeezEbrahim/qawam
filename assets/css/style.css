@@ -73,7 +73,7 @@ a {
 
 
 section {
-  padding: 3% 3% 3% 3%;
+  padding: 3% 6% 3% 6%;
 }
 
 /** scrollbar style */
@@ -242,6 +242,13 @@ h2 {
 /* nav-toggler */
 button.navbar-toggler {
   border: none;
+  width: 3rem;
+  height: auto ;
+}
+
+button.navbar-toggler img{
+  width: 100%;
+  height: auto ;
 }
 
 .navbar-toggler:focus,
@@ -249,6 +256,7 @@ button.navbar-toggler {
   outline: none;
   box-shadow: none;
 }
+
 
 /* buttons */
 nav .btn {
@@ -261,20 +269,22 @@ nav .btn {
 #loading {
   position: fixed;
   z-index: 9999;
-  height: 105%;
-  width: 100%;
-  text-align: center;
   background: var(--color-primary-white);
-  margin-top: -100px;
-  overflow: visible;
-  z-index: 99999;
+  margin: 0 ;
+  padding: 0;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #loading img {
-  max-width: 200px;
+  width: 12rem;
+  max-width: 15rem;
 }
 /* Scroll Up button */
 #btn-back-to-top {
@@ -460,13 +470,14 @@ nav .btn {
   background: linear-gradient(329.52deg, #111111 32.72%, #1d1d1d 85.75%);
   margin: 0;
   padding: 8rem 0 2rem 0;
+  height: auto;
 }
-
-  
 
 .swiper {
   width: 100%;
-  height: 17rem;
+  height: 15rem;
+  margin-bottom: 2.5rem;
+  overflow: visible;
 }
 
 .device-slider-section .swiper-slide {
@@ -474,7 +485,7 @@ nav .btn {
   justify-content: center;
   align-items: center;
   transition: all 0.8s linear;
-  width: 80%;
+  width: 100%;
   -webkit-transition: all 0.8s linear;
   -moz-transition: all 0.8s linear;
   -ms-transition: all 0.8s linear;
@@ -484,17 +495,73 @@ nav .btn {
 /* from swiper */
 .device-slider-section .swiper-pointer-events {
   padding: 5rem 1rem;
-  height: 26rem;
-  overflow: visible;
-
+  height: 30rem;
+  margin: 3rem 0 2rem 0;
 }
 
+.device-slider-section .swiper-slide img,
+.device-slider-section .front-qawam  {
+  height: 100%;
+  max-height: 100%;
+}
+.device-slider-section .swiper-slide {
+  text-align: center
+}
+
+.swiper-slide.swiper-slide-active,
+.swiper-slide.swiper-slide-duplicate-active{
+      color: var(--color-primary-white);
+      transform: scale(1.4) !important;
+      -webkit-transform: scale(1.4) !important;
+      -moz-transform: scale(1.4) !important;
+      -ms-transform: scale(1.4) !important;
+      -o-transform: scale(1.4) !important;
+}
+
+.arrow-buttons {
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+  transition: 0.5s ease-in-out;
+}
+.swiper-button-disabled:hover {
+  opacity: 0.3 !important;
+  cursor: default;
+}
+
+.arrow-buttons img {
+  width: 55px;
+  height: 55px;
+  margin: 30px 10px;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+}
+
+.arrow-buttons img:hover {
+  opacity: 0.85;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+}
 
 /* div of the cicle comments */
+.device-slider-section .front-qawam {
+  position: relative;
+}
+
 #first-comment{
   position: absolute;
   top: -3.5rem;
-  width: 14rem;
+  width: 10.5rem;
 }
 
 
@@ -508,8 +575,8 @@ nav .btn {
 #second-comment {
   position: absolute;
   top: 14rem;
-  left: 16rem;
-  width: 14rem;
+  left: 15.5rem;
+  width: 10.5rem;
 }
 #second-comment p {
   font-weight: 200;
@@ -517,6 +584,7 @@ nav .btn {
   line-height: 150%;
   text-align: left;
 }
+
 /*div circle style */
 .circle-size {
   position: absolute;
@@ -576,6 +644,11 @@ nav .btn {
   -o-transition: all 0.2s linear;
 }
 
+.circle-size:hover ~ #first-comment p,
+.circle-size-down:hover ~ #second-comment p {
+  color: var(--color-secondary-blue);
+}
+
 @keyframes flicker {
   0% {
     opacity: 0.7;
@@ -586,48 +659,6 @@ nav .btn {
   100% {
     opacity: 0.7;
   }
-}
-
-
-
-.device-slider-section .swiper-slide img,
-.device-slider-section .front-qawam  {
-  height: 100%;
-  max-height: 80vh;
-}
-.device-slider-section .front-qawam {
-  position: relative;
-}
-
-.device-slider-section .swiper-slide {
-  text-align: center
-}
-
-.swiper-slide.swiper-slide-active,
-.swiper-slide.swiper-slide-duplicate-active{
-      color: var(--color-primary-white);
-      transform: scale(1.5) !important;
-      -webkit-transform: scale(1.5) !important;
-      -moz-transform: scale(1.5) !important;
-      -ms-transform: scale(1.5) !important;
-      -o-transform: scale(1.5) !important;
-}
-
-.arrow-buttons {
-  display: flex;
-  justify-content: center;
-  margin-left: 5px;
-}
-
-.arrow-buttons img {
-  width: 55px;
-  height: 55px;
-  margin: 30px 10px;
-}
-
-.arrow-buttons img:hover {
-  opacity: 0.85;
-  transition: all 0.3s ease-out;
 }
 
 .device-comment p {
@@ -642,8 +673,19 @@ nav .btn {
   -webkit-text-fill-color: transparent;
 }
 
+@media screen and (max-width: 1400px) {
+  .device-slider-section .swiper-pointer-events {
+    height: 25rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .device-slider-section .swiper-pointer-events {
+    height: 23rem;
+  }
+}
+  
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 800px) {
   .device-slider-section .swiper-pointer-events {
     padding: 2rem 1rem;
     height: 14rem;
@@ -735,12 +777,11 @@ nav .btn {
 
 .backgroundImg img {
   position: relative;
-  width: 90px;
-  height: 80px;
-  right: 60px;
+  width: 80px;
+  height: 70px;
+  right: 55px;
   top: 30px;
   animation: MoveUpDown 2.6s linear infinite;
-  -webkit-animation: MoveUpDown 2.6s linear infinite;
 }
 
 
@@ -852,7 +893,10 @@ nav .btn {
 
 @media screen and (max-width: 650px) {
   .backgroundImg img {
-    right: 45px;
+    right: 30px;
+    top: 20px;
+    width: 50px;
+    height: 40px;
   }
   .medical-problem-section h2 {
     font-weight: 400;
@@ -1045,13 +1089,17 @@ width: 161.4px;
   color: var(--color-secondary-white);
 }
 
+.first-row-about p {
+  padding: 0;
+}
+
 .corner-device {
   position: absolute;
   top: 0px;
   right: 0px;
   height: auto;
-  width: 40%;
-  max-width: 120%;
+  width: 38%;
+  max-width: 50%;
   animation: MoveUpDown 3s linear infinite;
   -webkit-animation: MoveUpDown 3s linear infinite;
 }
@@ -1080,6 +1128,13 @@ width: 161.4px;
   .about-section .text-align {
     text-align: center;
   }
+}
+
+@media screen and (max-width: 650px) {
+  .corner-device {
+    width: 50%;
+  }
+
 }
 
 /* ================================================================== */

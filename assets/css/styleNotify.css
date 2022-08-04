@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
+
 html {
   scroll-behavior: smooth;
 }
@@ -30,7 +32,7 @@ ul {
 
 ::-webkit-scrollbar {
   width: 16px;
-  background-color: #141414;
+  background: linear-gradient(329.52deg, #111111 32.72%, #1d1d1d 85.75%);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -46,7 +48,7 @@ section.coming-soon{
   
 .coming-soon {
   padding: 50px 5% 110px 5%;
-  background: #141414;
+  background: linear-gradient(329.52deg, #111111 32.72%, #1d1d1d 85.75%);
   overflow: hidden;
   height: 100vh;
   display: flex;

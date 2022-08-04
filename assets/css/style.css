@@ -57,7 +57,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-width: 440px;
+  min-width: 330px;
   width: 100%;
 }
 
@@ -109,14 +109,11 @@ h2 {
 
 /* buttons */
 .btn {
-  padding: 5px 24px;
   font-weight: 500;
   font-size: 12px;
   line-height: 22px;
   width: fit-content;
-  height: 45px;
   border-radius: 14px;
-  margin: 5px 5px;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
   -ms-border-radius: 14px;
@@ -167,151 +164,20 @@ h2 {
   border-width: 0 1px 0 1px;
 }
 
-/* ================================================================== */
-/* ================================================================== */
-/* ================================================================== */
-/* ------------------------- Start of navbar ------------------------ */
-/* ================================================================== */
-/* ================================================================== */
-/* ================================================================== */
-
-nav .nav-link {
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 150%;
-  color: var(--color-primary-black) !important;
-}
-
-nav .nav-link:hover {
-  color: var(--color-secondary-blue);
-}
-nav .nav-link-padding:after {
-  bottom: -4px;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 0;
-  background: var(--color-primary-black);
-  opacity: 0.6;
-  transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
-  width: 0;
-}
-
-nav .nav-link-padding:hover:after {
-  width: 50%;
-  opacity: 0.9;
-}
-
-.red-red-button {
+a.btn.red-red-button {
   background: var(--color-primary-red);
   color: var(--color-primary-white);
+  padding-top: 8px;
 }
-
-.red-red-button:hover {
+a.btn.red-red-button:hover {
   color: var(--color-primary-white);
   filter: brightness(95%);
   -webkit-filter: brightness(95%);
 }
 
-.navbar {
-  transition: 0.5s;
-  opacity: 0.925;
-}
-
-.bg-light {
-  background-color: var(--color-primary-white) !important;
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
-}
-
-/* logo */
-.logo {
-  width: 67px;
-}
-
-/* desktop view */
-@media (min-width: 991px) {
-  .navbar {
-    padding: 60px 0 55px 0;
-  }
-
-  .site-header {
-    padding-top: 3rem;
-  }
-
-  .logo-out {
-    display: none;
-  }
-
-  .logo-in {
-    margin-top: 0.5rem;
-  }
-
-  nav .nav-link-padding {
-    padding-top: 20px;
-  }
-
-  .navbar-custom {
-    height: 80px;
-  }
-
-  .nav-item {
-    padding-right: 20px;
-  }
-}
-
-/* mobile view */
-@media (max-width: 991px) {
-  .logo-in {
-    display: none;
-  }
-
-  .logo-out {
-    width: 4rem;
-    height: auto;
-    margin-left: 1.5rem;
-    margin-top: 0.5rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .logo-out {
-    width: 3.2rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .logo-out {
-    width: 2.8rem;
-  }
-}
-
-/* nav-toggler */
-button.navbar-toggler {
-  border: none;
-  width: 3rem;
-  height: auto;
-}
-
-button.navbar-toggler img {
-  width: 100%;
-  height: auto;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active {
-  outline: none;
-  box-shadow: none;
-}
-
-/* buttons */
-nav .btn {
-  width: 139px;
-  padding: 5px 5px;
-}
-
+/* ================================================================== */
+/* ------------------------- Genral style    ------------------------ */
+/* ================================================================== */
 /* Loading page */
 #loading {
   position: fixed;
@@ -337,46 +203,201 @@ nav .btn {
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 35px;
   z-index: 999;
   display: none;
   border: none;
   transition: 0.5s;
+  cursor: pointer;
   background-color: transparent;
 }
 
-.scrollUp {
-  width: 50px;
-  background-color: transparent;
-  animation: MoveUpDown 1s linear infinite;
-  -webkit-animation: MoveUpDown 1s linear infinite;
+#scrollup {
+  position: relative;
+  width: 27px;
+  height: 80px;
 }
 
-@keyframes MoveUpDown {
+#scrollup span {
+  position: absolute;
+}
+#scrollup img {
+  width: 27px;
+}
+
+#scrollup span:nth-child(1) {
+  left: 0;
+}
+
+#scrollup span:nth-child(1) img {
+  animation: scrollup 2.5s 0.6s infinite linear;
+  -webkit-animation: scrollup 2.5s 0.6s infinite linear;
+}
+
+#scrollup span:nth-child(2) {
+  top: 22%;
+  left: 0;
+}
+
+#scrollup span:nth-child(2) img {
+  animation: scrollup 2.5s 0.4s infinite linear;
+  -webkit-animation: scrollup 2.5s 0.4s infinite linear;
+}
+#scrollup span:nth-child(3) {
+  top: 44%;
+  left: 0;
+}
+#scrollup span:nth-child(3) img {
+  animation: scrollup 2.5s 0.2s infinite linear;
+  -webkit-animation: scrollup 2.5s 0.2s infinite linear;
+}
+@keyframes scrollup {
+  0%,
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-10%);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes MoveUpDownShort {
   0%,
   100% {
     transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
   }
 
   50% {
     transform: translateY(-4px);
-    -webkit-transform: translateY(-4px);
-    -moz-transform: translateY(-4px);
-    -ms-transform: translateY(-4px);
-    -o-transform: translateY(-4px);
+  }
+}
+
+@keyframes MoveUpDownLong {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
   }
 }
 
 /* ================================================================== */
+/* ------------------------- Start of navbar ------------------------ */
 /* ================================================================== */
+
+.navbar {
+  transition: 0.5s;
+  opacity: 0.945;
+}
+
+.bg-light {
+  background-color: var(--color-primary-white) !important;
+}
+
+/* logo */
+nav .logo {
+  width: 65px;
+  margin-top: 5px;
+}
+
+/* nav-links */
+.navbar-nav {
+  padding-top: 10px;
+}
+
+nav .nav-link {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-primary-black) !important;
+  padding-top: 15px;
+}
+
+nav .nav-link:hover {
+  color: var(--color-secondary-blue);
+}
+
+nav .nav-link:after {
+  bottom: -4px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  background: var(--color-primary-black);
+  opacity: 0.6;
+  transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+  width: 0;
+  -webkit-transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+  -moz-transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+  -ms-transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+  -o-transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+nav .nav-link:hover:after {
+  width: 50%;
+  opacity: 0.9;
+}
+
+nav li.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* buttons */
+nav .btn {
+  width: 139px;
+  padding: 5px 5px;
+}
+
+nav li:last-child {
+  margin: 10px 0;
+}
+nav .btn.red-red-button {
+  height: 40px;
+  margin: 2.5px 2.5px;
+}
+
+/* nav-toggler */
+button.navbar-toggler {
+  border: none;
+  width: 3rem;
+  height: auto;
+}
+
+button.navbar-toggler img {
+  width: 100%;
+  height: auto;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* desktop view */
+@media (min-width: 991px) {
+  .navbar {
+    padding: 45px 0;
+    height: 80px;
+  }
+
+  .nav-item {
+    padding-right: 15px;
+  }
+}
+
 /* ================================================================== */
 /* -------------------------- header start -------------------------- */
-/* ================================================================== */
-/* ================================================================== */
 /* ================================================================== */
 
 .site-header {
@@ -401,8 +422,8 @@ nav .btn {
 
 .learn-more h4 i {
   font-size: 10px;
-  animation: MoveUpDown 2s linear infinite;
-  -webkit-animation: MoveUpDown 2s linear infinite;
+  animation: MoveUpDownShort 2s linear infinite;
+  -webkit-animation: MoveUpDownShort 2s linear infinite;
 }
 
 .learm-more h4:hover {
@@ -504,17 +525,13 @@ nav .btn {
 }
 
 /* ================================================================== */
-/* ================================================================== */
-/* ================================================================== */
 /* ----------------------- device slider start ---------------------- */
-/* ================================================================== */
-/* ================================================================== */
 /* ================================================================== */
 
 .device-slider-section {
   background: linear-gradient(329.52deg, #111111 32.72%, #1d1d1d 85.75%);
   margin: 0;
-  padding: 4rem 0 2rem 0;
+  padding: 4% 0 2rem 0;
   height: auto;
 }
 
@@ -655,18 +672,18 @@ span.swiper-pagination-bullet-active {
   cursor: pointer;
 }
 
-#dot-info {
+.dot-info {
   width: 10px;
   height: 10px;
   left: 11px;
   top: 10.5px;
-  background: var(--color-primary-white);
+  background: var(--color-primary-white) !important;
   border-radius: 50%;
   position: absolute;
 }
 
-#border-info {
-  border: 0.1px solid var(--color-primary-white);
+.border-info {
+  border: 0.1px solid var(--color-primary-white) !important;
   border-radius: 50%;
   opacity: 0.3;
   width: 2.5rem;
@@ -676,16 +693,16 @@ span.swiper-pagination-bullet-active {
   left: -4.2px;
 }
 
-#border-info:hover {
-  border-color: var(--color-secondary-blue);
+.border-info:hover {
+  border-color: var(--color-secondary-blue) !important;
   animation: flicker 0.1s 2;
   opacity: 0.5;
   -webkit-animation: flicker 0.1s 2;
 }
 
-.circle-size:hover #dot-info,
-.circle-size-down:hover #dot-info {
-  background: var(--color-secondary-blue);
+.circle-size:hover .dot-info,
+.circle-size-down:hover .dot-info {
+  background: var(--color-secondary-blue) !important;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -821,18 +838,15 @@ span.swiper-pagination-bullet-active {
 }
 
 /* ================================================================== */
-/* ================================================================== */
-/* ================================================================== */
 /* --------------------- medical problem info start ----------------- */
-/* ================================================================== */
-/* ================================================================== */
 /* ================================================================== */
 
 .medical-problem-section {
   background: var(--color-tertiary-black);
   height: auto;
   background-size: cover;
-  padding-top: 0;
+  padding-top: 4%;
+  overflow: hidden;
 }
 
 .medical-problem-section p {
@@ -855,7 +869,8 @@ span.swiper-pagination-bullet-active {
   height: 70px;
   right: 55px;
   top: 30px;
-  animation: MoveUpDown 2.6s linear infinite;
+  animation: MoveUpDownShort 2.6s linear infinite;
+  -webkit-animation: MoveUpDownShort 2.6s linear infinite;
 }
 
 .animate-on-scroll.active {
@@ -884,7 +899,6 @@ span.swiper-pagination-bullet-active {
 
 #mohammed-comment {
   position: absolute;
-  overflow: visiable;
   padding: 0;
   text-align: center;
   width: 100%;
@@ -904,7 +918,6 @@ span.swiper-pagination-bullet-active {
 }
 
 #medical .container {
-  padding-top: 5%;
   padding-bottom: 5%;
 }
 
@@ -922,6 +935,10 @@ span.swiper-pagination-bullet-active {
   border-color: var(--color-secondary-blue);
   color: var(--color-secondary-blue);
   width: 161.6px;
+  padding: 5px 24px;
+  height: 45px;
+  margin: 2.5px 2.5px;
+  padding-top: 10px;
 }
 .btn-style-blue::before,
 .btn-style-blue::after {
@@ -938,7 +955,12 @@ span.swiper-pagination-bullet-active {
 .btn-style-red {
   border-color: var(--color-tertiary-darkwhite);
   color: var(--color-tertiary-darkwhite);
+  padding: 5px 24px;
+  height: 45px;
+  margin: 2.5px 2.5px;
+  padding-top: 10px;
 }
+
 .btn-style-red::before,
 .btn-style-red::after {
   border-color: var(--color-tertiary-red);
@@ -980,35 +1002,9 @@ span.swiper-pagination-bullet-active {
     line-height: 160%;
   }
 }
-/* ----------------- animation -----------------*/
 
-/* background posture icon animation */
-.animation3D {
-  box-shadow: none;
-  background: transparent;
-  border: none;
-  cursor: default;
-}
-
-.animation3D span {
-  will-change: transform, filter;
-  transition: all 0.15s ease-out;
-  display: block;
-  transform: rotateX(0deg) rotateY(0deg) scale(1);
-  filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
-  perspective-origin: 0 0;
-  -webkit-transform: rotateX(0deg) rotateY(0deg) scale(1);
-  -moz-transform: rotateX(0deg) rotateY(0deg) scale(1);
-  -ms-transform: rotateX(0deg) rotateY(0deg) scale(1);
-  -o-transform: rotateX(0deg) rotateY(0deg) scale(1);
-}
-
-/* ================================================================== */
-/* ================================================================== */
 /* ================================================================== */
 /* ------------------------ App-section start ----------------------- */
-/* ================================================================== */
-/* ================================================================== */
 /* ================================================================== */
 
 .App-section {
@@ -1018,7 +1014,7 @@ span.swiper-pagination-bullet-active {
     var(--color-tertiary-white) 100%
   );
   height: auto;
-  padding-top: 2%;
+  padding-top: 4%;
 }
 
 .App-section h2 {
@@ -1097,43 +1093,14 @@ width: 161.4px;
 }
 
 /* ================================================================== */
-/* ================================================================== */
-/* ================================================================== */
-/* ------------------------ partner logos------------------------ */
-/* ================================================================== */
-/* ================================================================== */
+/* ------------------------ partner logos---------------------------- */
 /* ================================================================== */
 
 .partner-logos {
   background-color: var(--color-tertiary-white);
   height: auto;
 }
-/* 
-.partner-logos .slide-track img {
-  width: 200px;
-  height: 200px;
-  animation: scroll 90s linear infinite;
-  -webkit-animation: scroll 90s linear infinite;
-}
 
-.partner-logos .slide-track {
-  width: 100%;
-  display: flex;
-  gap: 6rem;
-  overflow: hidden;
-}
-
-.partner-logos .slider {
-  margin-top: 4rem;
-  background-color: var(--color-tertiary-white);
-  padding: 2rem 2rem;
-}
-
-@keyframes scroll {
-  0% {transform: translateX(0);}
-  100% {transform: translatex(-1000%)}
-} */
-/* ------------------------ */
 .partner-logos h2 {
   color: var(--color-primary-black);
 }
@@ -1147,16 +1114,10 @@ width: 161.4px;
   align-items: center;
   -webkit-box-align: center;
   display: grid;
-  gap: 4.8rem 4.8rem;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto auto;
   justify-items: center;
   margin: 4.3rem auto 1.3rem auto;
   max-width: 1024px;
-}
-@media screen and (max-width: 570px) {
-  .clients {
-    grid-template-columns: auto;
-  }
 }
 
 .clients li {
@@ -1180,13 +1141,12 @@ width: 161.4px;
 .clients li:hover {
   -webkit-transform: translateY(-0.3rem);
   transform: translateY(-0.3rem);
+  -moz-transform: translateY(-0.3rem);
+  -ms-transform: translateY(-0.3rem);
+  -o-transform: translateY(-0.3rem);
 }
 
 @media (min-width: 1024px) {
-  .clients {
-    grid-template-columns: auto auto auto auto;
-  }
-
   .clients img,
   .clients svg {
     height: 6rem;
@@ -1208,12 +1168,9 @@ width: 161.4px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* ================================================================== */
-/* ================================================================== */
+
 /* ================================================================== */
 /* -------------------------- About start --------------------------- */
-/* ================================================================== */
-/* ================================================================== */
 /* ================================================================== */
 
 .about-section {
@@ -1257,8 +1214,8 @@ width: 161.4px;
   height: auto;
   width: 38%;
   max-width: 80rem;
-  animation: MoveUpDown 3s linear infinite;
-  -webkit-animation: MoveUpDown 3s linear infinite;
+  animation: MoveUpDownLong 6s ease infinite;
+  -webkit-animation: MoveUpDownLong 6s ease infinite;
 }
 
 .about-section p span:nth-child(2) {
@@ -1353,11 +1310,7 @@ width: 161.4px;
 }
 
 /* ================================================================== */
-/* ================================================================== */
-/* ================================================================== */
 /* -------------------------- footer start -------------------------- */
-/* ================================================================== */
-/* ================================================================== */
 /* ================================================================== */
 
 .site-footer {

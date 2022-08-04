@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- CSS files-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/styleContact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Qawam</title>
+    <!-- font file -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- add favicon link -->
+    <link
+      rel="icon"
+      href="assets/images/favicon.png"
+      type="images/favicon.png"
+    />
+  </head>
+
+  <body>
+    <section class="contact">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/white-logo.png" alt="logo" />
+        </a>
+      </div>
+
+      <div class="main-content">
+        <div class="row">
+          <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="getin-touch">
+              <form autocomplete="off">
+                <h3 class="title">Get in touch</h3>
+                <div class="form-group position-relative">
+                  <label for="formName" class="d-block">
+                    <i class="icon fa fa-user"></i>
+                  </label>
+                  <input
+                    type="text"
+                    id="formName"
+                    class="form-control"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+
+                <!-- E-mail -->
+                <div class="form-group position-relative">
+                  <label for="formEmail" class="d-block">
+                    <i class="icon fa-regular fa-envelope"></i>
+                  </label>
+                  <input
+                    type="email"
+                    id="formEmail"
+                    class="form-control"
+                    placeholder="E-mail"
+                    required
+                  />
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group position-relative">
+                  <label for="formPhone" class="d-block">
+                    <i class="icon fa fa-phone"></i>
+                  </label>
+                  <input
+                    type="tel"
+                    id="formPhone"
+                    class="form-control"
+                    placeholder="Phone"
+                  />
+                </div>
+
+                <!-- Message -->
+                <div class="form-group message">
+                  <textarea
+                    id="formMessage"
+                    class="form-control"
+                    rows="7"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+                <!-- Submit btn -->
+                <div>
+                  <ul>
+                    <li>
+                      <button id="submit_button" type="submit" class="btn">Send</button>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/qawam_info/"
+                        target="_blank"
+                        ><i class="fa fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/qawam_info" target="_blank"
+                        ><i class="fa fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/Qawam-111943707961859"
+                        target="_blank"
+                        ><i class="fa fa-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/company/qawam"
+                        target="_blank"
+                        ><i class="fa fa-linkedin"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+
+              <div class="back-home">
+                <a href="index.html">
+                  <i class="fa-solid fa-angle-left"> Back</i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id="contact-img">
+              <img
+                id="front-device"
+                src="assets/images/front-device.png"
+                alt="qawam device img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- font awsome -->
+    <script
+      src="https://kit.fontawesome.com/f838142837.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom js for 3D hovering -->
+    <script>
+      // /* -----------------3d hover animation of the background posture -----------------------*/
+      /* Store the element in el */
+      let el = document.getElementById("contact-img");
+
+      /* Get the height and width of the element */
+      const height = el.clientHeight;
+      const width = el.clientWidth;
+
+      /*
+       * Add a listener for mousemove event
+       * Which will trigger function 'handleMove'
+       * On mousemove
+       */
+      el.addEventListener("mousemove", handleMove);
+
+      /* Define function a */
+      function handleMove(e) {
+        /*
+         * Get position of mouse cursor
+         * With respect to the element
+         * On mouseover
+         */
+        /* Store the x position */
+        const xVal = e.layerX;
+        /* Store the y position */
+        const yVal = e.layerY;
+
+        /*
+         * Calculate rotation valuee along the Y-axis
+         * Here the multiplier 20 is to
+         * Control the rotation
+         * You can change the value and see the results
+         */
+        const yRotation = 10 * ((xVal - width / 2) / width);
+
+        /* Calculate the rotation along the X-axis */
+        const xRotation = -10 * ((yVal - height / 2) / height);
+
+        /* Generate string for CSS transform property */
+        const string =
+          "perspective(500px) scale(1.01) rotateX(" +
+          xRotation +
+          "deg) rotateY(" +
+          yRotation +
+          "deg)";
+
+        /* Apply the calculated transformation */
+        el.style.transform = string;
+      }
+
+      /* Add listener for mouseout event, remove the rotation */
+      el.addEventListener("mouseout", function () {
+        el.style.transform =
+          "perspective(500px) scale(1) rotateX(0) rotateY(0)";
+      });
+
+      /* Add listener for mousedown event, to simulate click */
+      el.addEventListener("mousedown", function () {
+        el.style.transform =
+          "perspective(500px) scale(0.96) rotateX(0) rotateY(0)";
+      });
+
+      /* Add listener for mouseup, simulate release of mouse click */
+      el.addEventListener("mouseup", function () {
+        el.style.transform =
+          "perspective(500px) scale(1.01) rotateX(0) rotateY(0)";
+      });
+    </script>
+  </body>
+</html>

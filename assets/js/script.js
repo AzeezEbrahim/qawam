@@ -3,12 +3,13 @@ $(window).on("load", function () {
   $("#loading").fadeOut(500);
 });
 
-/* ----------------------------- nav-bar shadow ------------------------------*/
+/* ----------------------------- nav-bar ------------------------------*/
+// navbar shadow
 // if navbar is at top, remove box shadow
 navbar = document.getElementById("nav-bar");
 window.addEventListener("scroll", function () {
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > 0) {
+  if (scrollTop > 0 && window.innerWidth > 992) {
     navbar.style.boxShadow = "0px 0px 53px -30px rgba(0,0,0,0.67)";
   } else {
     navbar.style.boxShadow = "none";
@@ -20,14 +21,13 @@ window.addEventListener("scroll", function () {
 // SWIPER CONFIG (divce slider)
 var reviewsSwiper = new Swiper(".swiper", {
   slidesPerView: window.innerWidth < 900 ? 1 : 2.45,
-  // slide size fit to the screen
-  // slideSize: window.innerWidth < 700 ? window.innerWidth*0.5 : window.innerWidth,
+  loop: true,
   spaceBetween: 300,
   grabCursor: true,
-  loop: false,
   speed: 1000,
   centeredSlides: true,
   clickable: true,
+  initialSlide: 1,
 
   navigation: {
     nextEl: ".next-button",
@@ -35,10 +35,9 @@ var reviewsSwiper = new Swiper(".swiper", {
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 });
-// start from second slide
-reviewsSwiper.slideTo(1, false, false);
 
 // on window resize if width is less than 1000px, sliderperview is set to 1
 window.addEventListener("resize", function () {
@@ -96,16 +95,3 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-/* -----------------random image on each page refresh -----------------------*/
-
-function Randomize() {
-  var images = new Array("front-device-cutted", "inside-device-cutted");
-  var imageNum = Math.floor(Math.random() * images.length);
-
-  document.getElementById("random").src =
-    "assets/images/" + images[imageNum] + ".png";
-}
-
-window.onload = Randomize;
-

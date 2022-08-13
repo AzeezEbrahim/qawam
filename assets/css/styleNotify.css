@@ -11,6 +11,9 @@ body {
   color: #002541;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
+  background-size: cover;
+  min-width: 300px;
+  width: 100%;
 }
 a,
 button:hover,
@@ -30,26 +33,21 @@ ul {
   list-style: none;
 }
 
-::-webkit-scrollbar {
-  width: 16px;
-  background: linear-gradient(329.52deg, #111111 32.72%, #1d1d1d 85.75%);
-}
+/** scrollbar style */
 
-::-webkit-scrollbar-thumb {
-  background: #ffffff;
-  border-radius: 20px;
-  border: 4px solid;
+::-webkit-scrollbar {
+  display: none;
 }
 
 /*-- footer css start here now --*/
-section.coming-soon{
-    padding-right: 0;
-  }
-  
+section.coming-soon {
+  padding-right: 0;
+}
+
 .coming-soon {
   padding: 50px 5% 110px 5%;
   background: linear-gradient(329.52deg, #111111 32.72%, #1d1d1d 85.75%);
-  overflow: hidden;
+  overflow: auto;
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -83,8 +81,6 @@ section.coming-soon{
   max-width: 521px;
   margin-bottom: 47px;
 }
-
-
 
 .about-compy.about-compy input.form-control {
   background: rgba(215, 220, 231, 0.2) !important;
@@ -136,11 +132,16 @@ section.coming-soon{
 .about-compy ul li a:hover {
   color: #5286ff;
 }
+
+.about-compy .coming-left {
+  padding-right: 40px;
+}
+
 .coming-img {
   text-align: right;
 }
 .coming-img img {
-  width: 60%;
+  width: 80%;
   height: auto;
   padding: 10px 10px;
   text-align: right;
@@ -159,31 +160,12 @@ div#mc_embed_signup_scroll {
   padding: 2rem 0;
   color: #051e5a;
   font-size: 13px;
-  line-height: 50%;   
+  line-height: 50%;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
-
-@media only screen and (max-width: 1024px) and (min-width: 992px) {
-  .coming-img img {
-    width: 85%;
-  }
-}
-
-@media only screen and (max-width: 991px) and (min-width: 768px) {
-  .coming-img img {
-    width: 100%;
-  }
-  .coming-soon {
-    overflow: auto;
-  }
-  .coming-soon {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 570px) {
   .coming-soon {
     padding: 35px 22px 60px;
     height: 100%;

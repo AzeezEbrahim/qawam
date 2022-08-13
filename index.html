@@ -1,907 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Qawam</title>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,  shrink-to-fit=no"
-    />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no" />
+  <meta name="description" content="Daily posture analysis for your neck for building healthy habits" />
 
-    <!-- CSS files-->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- CSS files-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" defer />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" defer />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" defer />
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap">
+  <link rel="stylesheet" href="assets/css/style.min.css" />
 
-    <!-- add favicon link -->
-    <link
-      rel="icon"
-      href="assets/images/favicon.png"
-      type="images/favicon.png"
-    />
-  </head>
+  <!-- add favicon link -->
+  <link rel="icon" href="assets/images/favicon.png" type="images/favicon.png" />
 
-  <body>
-    <!-- Loading page -->
-    <div id="loading">
-      <img src="assets/images/animation.gif" alt="animation loading" />
+
+  <title>Qawam</title>
+</head>
+
+<body>
+  <!-- Loading page -->
+  <div id="loading">
+    <img src="assets/images/animation.gif" alt="animation loading" />
+  </div>
+
+  <!-- Back to top button -->
+  <span id="btn-back-to-top">
+    <div id="scrollup">
+      <span><img src="assets/images/Vector1.png" style="--order: 1" alt="logo scrollUp" /></span>
+      <span><img src="assets/images/Vector2.png" style="--order: 2" alt="logo scrollUp" /></span>
+      <span><img src="assets/images/Vector3.png" style="--order: 3" alt="logo scrollUp" /></span>
+    </div>
+  </span>
+
+  <!-- Start of navbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="nav-bar">
+    <div class="container">
+      <!-- logo -->
+      <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo.png" alt="logo" /></a>
+
+      <!-- menu toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="assets/images/bars.svg" alt="Menu-bars" /></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#device">Qawam Device</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#medical">Medical info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#App">The App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn red-red-button" href="notify.html">Notify me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Start of header -->
+
+  <header class="site-header">
+    <div class="header-title">
+      <p data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-duration="1500" data-aos-offset="0">
+        Your Personal Posture Trainer
+        <br />
+        Daily posture analysis for building healthy habits
+      </p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
+          <model-viewer id="qawam-3d" src="https://cdn.jsdelivr.net/gh/AzeezEbrahim/qawam/assets/src/scene.glb"
+            poster="assets/images/qawam-poster.webp" camera-controls camera-orbit="calc(-2deg + env(window-scroll-y) *
+              4rad) calc(85deg
+              + env(window-scroll-y) * 90deg) calc(3m - env(window-scroll-y) *
+              1.5m)" disable-zoom shadow-intensity="1" auto-rotate ar ar-modes="webxr scene-viewer quick-look"
+            ios-src="https://cdn.jsdelivr.net/gh/AzeezEbrahim/qawam/assets/src/QAWAM_3D_WEB.usdz"
+            alt="A 3D model of an Qawam device."></model-viewer>
+
+          <div>
+            <a class="learn-more" href="#device">
+              <h4>
+                Learn More <br />
+                <i class="fa-solid fa-chevron-down"></i>
+              </h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Start of device slider -->
+
+  <section class="device-slider-section" id="device">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="inside-device" src="assets/images/inside-device.webp" alt="inside-device" loading="lazy" />
+        </div>
+
+        <div class="swiper-slide">
+          <div class="front-qawam">
+            <div class="circle-size" data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-duration="600"
+              data-aos-offset="0">
+              <span class="dot-info"></span>
+              <span class="border-info"></span>
+            </div>
+
+            <div id="first-comment" class="circle-comments" data-aos="fade-zoom-in" data-aos-easing="linear"
+              data-aos-duration="600" data-aos-offset="0">
+              <p>
+                Sleek design, modern and lightweight.
+              </p>
+            </div>
+
+            <div class="circle-size-down" data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-duration="600"
+              data-aos-offset="0">
+              <span class="dot-info"></span>
+              <span class="border-info"></span>
+            </div>
+
+            <div id="second-comment" class="circle-comments" data-aos="fade-zoom-in" data-aos-easing="linear"
+              data-aos-duration="600" data-aos-offset="0">
+              <p>
+                Smooth and minimalistic in every way possible.
+              </p>
+            </div>
+
+            <img class="front-device" src="assets/images/front-device.webp" alt="front-device" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <img class="back-device" src="assets/images/back-device.webp" alt="back-device" loading="lazy" />
+        </div>
+      </div>
+    </div>
+    <!--  pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="arrow-buttons">
+      <img class="prev-button" src="assets/images/left-arrow.png" alt="left
+          arrow button" />
+      <img class="next-button" src="assets/images/right-arrow.png" alt="right
+          arrow button" />
     </div>
 
-    <!-- Back to top button -->
-    <a id="btn-back-to-top">
-      <div id="scrollup">
-        <span><img src="assets/images/Vector1.png" alt="logo scrollUp" /></span>
-        <span><img src="assets/images/Vector2.png" alt="logo scrollUp" /></span>
-        <span><img src="assets/images/Vector3.png" alt="logo scrollUp" /></span>
+    <div class="container device-comment">
+      <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-offset="0">
+        A unique, AI-powered, and socially invisible headwear add-on that can be attached easily to any headgear such as
+        Saudi Traditional Oqal, Hijab, Cap, or Glasses. Our Qawam sensor will monitor your back and neck posture and
+        alert you when you slouch or tilts your head; to help you in establishing a healthier, happier, more productive
+        life!
+      </p>
+    </div>
+  </section>
+
+  <!-- Start of medical info-->
+
+  <section class="medical-problem-section" id="medical">
+    <div class="container">
+      <!-- background  posture image -->
+      <div class="backgroundImg">
+        <img src="assets/images/white-small-logo.svg" alt="white-posture-icon" loading="lazy" />
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2 justify-content-xs-center align-items-center">
+        <div class="col-lg-6 medical-prob-left">
+          <img class="animate-on-scroll" src="assets/images/white-small-logo.svg" alt="white-posture-icon"
+            loading="lazy" />
+          <br />
+          <br />
+          <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600" data-aos-offset="0">
+            What is 'text neck' syndrome?
+          </h2>
+          <br />
+          <p data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600" data-aos-offset="0"
+            data-aos-delay="100">
+            Mobile phones are now generally seen as being essential to our
+            daily lives, with texting the most common way of
+            <br />communicating.
+            <br />
+            <br />
+            Typically people crane their neck forward 45° degrees when sending
+            text messages. According to a Surgical Technology International
+            study, this places a weight of almost 22kg on the spine, cervical
+            ligaments and other muscles - five times the pressure considered
+            normal.
+          </p>
+          <br />
+          <div data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="200">
+            <h3>Global Mobile Sales:</h3>
+            <img class="statics" src="assets/images/statics.webp" alt="posture
+                info" />
+          </div>
+        </div>
+
+        <div class="col-lg-6 medical-prob-right">
+          <div class="mohammed-posture-div">
+            <img data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="200"
+              class="mohammed-posture img-responsive" src="assets/images/mohammed-posture.webp" alt="posture info" />
+            <div id="mohammed-comment">
+              <p>Common Problems of exessive use of mobile phones</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-2 medical-sol-right">
+          <!-- background  posture image -->
+          <div class="backgroundImg">
+            <img src="assets/images/white-small-logo.svg" alt="white-posture-icon" loading="lazy" />
+          </div>
+
+          <div>
+            <img class="animate-on-scroll" src="assets/images/white-small-logo.svg" alt="white-posture-icon" />
+          </div>
+
+          <br />
+          <h2 data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600" data-aos-offset="0">
+            How we solve the problem
+          </h2>
+          <br />
+          <p data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600" data-aos-offset="0"
+            data-aos-delay="100">
+            Qawam corrects your posture by empowering you with alerts, data,
+            and professional support. We provide a unique, smart, and socially
+            invisible headwear add-on that can be attached easily to any
+            headgear such as Saudi Traditional Oqal, Hijab, Cap, or Glasses.
+            <br /><br />
+            Our Qawam sensor will monitor your back, and neck posture, and
+            alert you whenever you slouch or tilts your head for a long time.
+            The alert will be by mobile notification or a gentle vibration
+            from the device itself. The posture data will be saved over time,
+            and our Qawam app generates daily, weekly or monthly reports that
+            can be used by you or a medical professional to track your
+            progress.
+            <br />
+            <br />
+          </p>
+          <div id="medical-buttons">
+            <a href="#App" data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="200"
+              class="btn btn-style btn-style-red">
+              Download the App
+            </a>
+            <a href="notify.html" data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0"
+              data-aos-delay="250" class="btn btn-style btn-style-blue">
+              Notify me
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-1 medical-sol-left">
+          <br />
+          <img data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="200"
+            class="man-posture" src="assets/images/man-posture.webp" alt="posture info2" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start of App -->
+
+  <section class="App-section" id="App">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2">
+        <div class="col-lg-12">
+          <!-- background  posture image -->
+          <div class="backgroundImg">
+            <img src="assets/images/black-small-logo.svg" alt="black-posture-icon" />
+          </div>
+
+          <div>
+            <img class="animate-on-scroll" src="assets/images/black-small-logo.svg" alt="black-posture-icon" />
+          </div>
+          <br />
+
+          <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600" data-aos-offset="0">
+            Posture correction Qawam app
+          </h2>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+          <p class="app-paragraph" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600"
+            data-aos-offset="0">
+            Create a new, healthier you with the Qawam App. <br /><br />
+            Get into the habit of standing up straight,. It will help you feel better and be more productive!
+          </p>
+          <div class="d-grid gap-3 d-md-flex justify-content-start">
+            <div class="buttons-app-section">
+              <a href="https://play.google.com/" class="google-play" data-aos="fade-zoom-in" data-aos-easing="linear"
+                data-aos-offset="0" data-aos-delay="200">
+                <img src="assets/images/google-play.png" alt="google play app
+                    download" />
+              </a>
+
+              <a href="https://www.apple.com/sa/app-store/" class="app-store" data-aos="fade-zoom-in"
+                data-aos-easing="linear" data-aos-offset="0" data-aos-delay="250">
+                <img src="assets/images/app-store.png" alt="app store app
+                    download" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <div class="row right-section-app">
+            <div data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="300"
+              class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+              <img src="assets/images/thumbs-up.svg" alt="thumbs-up-icon" />
+              <br />
+              <p>
+                Accurate and real-time posture tracking.
+              </p>
+            </div>
+            <div data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="360"
+              class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <img src="assets/images/thumbs-up.svg" alt="thumbs-up-icon" />
+              <br />
+              <p>
+                AI-powered activity and posture detection.
+              </p>
+            </div>
+            <div data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="420"
+              class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <img src="assets/images/thumbs-up.svg" alt="thumbs-up-icon" />
+              <br />
+              <p>
+                Personalized office excercised based on your sitting history.
+              </p>
+            </div>
+            <div data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="480"
+              class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <img src="assets/images/thumbs-up.svg" alt="thumbs-up-icon" />
+              <br />
+              <p>
+                Daily, weekly or monthly progress reports.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 d-flex justify-content-center qawam-phone-container">
+        <img data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="200"
+          class="phone-qawam" src="assets/images/phone-qawam.webp" alt="phone-qawam" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Start of partner logos  -->
+
+  <section class="partner-logos">
+    <div class="container">
+      <div class="row-line">
+        <h6>Our partners</h6>
+      </div>
+      <ul class="clients">
+        <li>
+          <a href="https://www.kaust.edu.sa/en"><img class="kaust" src="assets/images/kaust-logo.svg" alt="Kaust" /></a>
+        </li>
+        <li>
+          <a href="https://misk.org.sa/en/"><img class="misk" src="assets/images/misk.png" alt="misk" /></a>
+        </li>
+        <li>
+          <a href="https://aws.amazon.com/partners/programs/global-startup/"><img class="aws"
+              src="assets/images/aws.png" alt="aws" /></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Start of about  -->
+
+  <section class="about-section">
+    <img class="corner-device" src="assets/images/corner-device.webp" alt="corner-qawam-device" />
+    <div class="container">
+      <div class="row first-row-about">
+        <div class="col-lg-7 col-md-10 col-sm-12 col-xs-12">
+          <!-- background  posture image -->
+          <div class="backgroundImg">
+            <img src="assets/images/white-small-logo.svg" alt="white-posture-icon" />
+          </div>
+
+          <div>
+            <img class="posture-icon animate-on-scroll" src="assets/images/white-small-logo.svg"
+              alt="black-posture-icon" />
+          </div>
+          <br />
+
+          <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600" data-aos-offset="0">
+            Who we are
+          </h2>
+          <p data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600" data-aos-offset="0"
+            data-aos-delay="100">
+            At Qawam, we believe that research and technology can help alleviate pain and improve posture for everyone.
+            We are a team of experienced researchers and engineers who are passionate about using machine learning and
+            AI to build products that make a difference.
+            <br />
+            <br />
+            We are supported by a board of technical and business advisors with over 20 years of experience in research
+            and startups.
+            Our mission is to use our expertise to develop products that improve the lives of people around the world.
+            We are headquartered in KAUST, and our team is dedicated to making a positive impact on the world.
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="row person-info-text">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 text-align" data-aos="fade-zoom-in" data-aos-easing="linear"
+          data-aos-offset="0" data-aos-delay="100">
+          <img src="assets/images/mohammed-about.png" alt="about-picture" />
+          <div class="about-person">
+            <p>
+              <span class="name">Mohammed A. Shukri</span>
+              <span>CEO & Co-Founder</span>
+              <a href="mailto:mshukri@qawam.ai"><span>mshukri@qawam.ai</span></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 text-align" data-aos="fade-zoom-in" data-aos-easing="linear"
+          data-aos-offset="0" data-aos-delay="250">
+          <img src="assets/images/safwan-about.png" alt="about-picture" />
+          <div class="about-person">
+            <p>
+              <span class="name">Safwan H. Ibrahim</span>
+              <span>COO & Co-Founder</span>
+              <a href="mailto:sibrahim@qawam.ai"><span>sibrahim@qawam.ai</span></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 text-align" data-aos="fade-zoom-in" data-aos-easing="linear"
+          data-aos-offset="0" data-aos-delay="400">
+          <img src="assets/images/maria-about.png" alt="about-picture" />
+          <div class="about-person">
+            <p>
+              <span class="name">Maria R. Bamakhramah</span>
+              <span>AI & Machine Learning Eng. Lead</span>
+              <a href="mailto:mbamakhramah@qawam.ai"><span>mbamakhramah@qawam.ai </span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start of location -->
+
+  <section class="location-section">
+    <a href="https://goo.gl/maps/8PafnnsBBVc1xLUY6" target="_blank">
+      <div class="hero-image">
+        <div class="hero-text">
+          <div>
+            <img src="assets/images/location-pointer.png" alt="Qawam-location-pointer" loading="lazy" />
+          </div>
+          <p>
+            Our Address <br />
+            <span>Qawam Tech LTD,, office 1234A, Thuwal</span>
+            <br /><span>23955, Saudi Arabia</span>
+          </p>
+        </div>
       </div>
     </a>
+  </section>
 
-    <!-- Start of navbar -->
+  <!-- Start of footer -->
 
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
-      id="nav-bar"
-    >
-      <div class="container">
-        <!-- logo -->
-        <a class="navbar-brand" href="#"
-          ><img class="logo" src="assets/images/logo.png" alt="logo"
-        /></a>
-
-        <!-- menu toggler -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span><img src="assets/images/bars.svg" alt="Menu-bars" /></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#device"
-                >Qawam Device</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#medical">Medical info</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#App">The App</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="notify.html" class="btn red-red-button"> Notify me </a>
-            </li>
-          </ul>
+  <footer class="site-footer" id="foot">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 order-1 text-align">
+          <div class="footer-links">
+            <ul>
+              <li><a class="nav-link" href="#App">Qawam App</a></li>
+              <li><a class="nav-link" href="#device">Qawam Device</a></li>
+              <li><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
 
-    <!-- Start of header -->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 order-2 text-align">
+          <div class="footer-links">
+            <ul class="nav-list">
+              <li>
+                <a class="nav-link" href="#" target="_blank">Privacy Policy</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#" target="_blank">Terms of service</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#" target="_blank">Refund Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <header class="site-header">
-      <div class="header-title">
-        <p
-          data-aos="fade-zoom-in"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
-          data-aos-offset="0"
-          data-aos-once="true"
-        >
-          Your Personal Posture Trainer
-          <br />
-          Daily posture analysis for building healthy habits
-        </p>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered"
-          >
-            <model-viewer
-              id="qawam-3d"
-              src="assets/src/scene.glb"
-              camera-controls
-              camera-orbit="calc(-2deg + env(window-scroll-y) * 4rad) calc(85deg + env(window-scroll-y) * 90deg) calc(3m - env(window-scroll-y) * 1.5m)"
-              disable-zoom
-              auto-rotate
-              ar
-              ar-modes="webxr"
-              ios-src="assets/src/QAWAM_3D_WEB.usdz"
-              alt="A 3D model of an Qawam device."
-            ></model-viewer>
-
-            <div>
-              <a class="learn-more" href="#device">
-                <h4>
-                  Learn More <br />
-                  <i class="fa-solid fa-chevron-down"></i>
-                </h4>
-              </a>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 order-3 text-align">
+          <div class="footer-links">
+            <a href="https://www.instagram.com/qawam_info/" class="social-icon px-2" target="_blank"><i
+                class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/qawam_info" class="social-icon px-2" target="_blank"><i
+                class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/qawam" class="social-icon px-2" target="_blank"><i
+                class="fa fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/Qawam-111943707961859" class="social-icon px-2" target="_blank"><i
+                class="fa fa-facebook-f"></i></a>
+            <div class="copyright">
+              <p>Copyrights © 2021, <span>Qawam.</span></p>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </footer>
 
-    <!-- Start of device slider -->
+  <!-- scripts -->
 
-    <section class="device-slider-section" id="device">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img
-              class="inside-device"
-              src="assets/images/inside-device.png"
-              alt="inside-device"
-              loading="lazy"
-            />
-          </div>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"
+    defer></script>
 
-          <div class="swiper-slide">
-            <div class="front-qawam">
-              <div
-                class="circle-size"
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-duration="600"
-                data-aos-offset="0"
-                data-aos-once="true"
-              >
-                <span class="dot-info"></span>
-                <span class="border-info"></span>
-              </div>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 
-              <div
-                id="first-comment"
-                class="circle-comments"
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-duration="600"
-                data-aos-offset="0"
-                data-aos-once="true"
-              >
-                <p>
-                  Specifiaction description velit officia consequat duis enim
-                  velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                </p>
-              </div>
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <!-- font awsome -->
+  <script src="https://kit.fontawesome.com/f838142837.js" crossorigin="anonymous" defer></script>
 
-              <div
-                class="circle-size-down"
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-duration="600"
-                data-aos-offset="0"
-                data-aos-once="true"
-              >
-                <span class="dot-info"></span>
-                <span class="border-info"></span>
-              </div>
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
-              <div
-                id="second-comment"
-                class="circle-comments"
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-duration="600"
-                data-aos-offset="0"
-                data-aos-once="true"
-              >
-                <p>
-                  Specifiaction description minim mollit non deserunt ullamco
-                  est sit aliqua dolor do amet sint.
-                </p>
-              </div>
+  <!-- custom js -->
+  <script src="assets/js/script.js" defer></script>
 
-              <img
-                class="front-device"
-                src="assets/images/front-device.png"
-                alt="front-device"
-                loading="lazy"
-              />
-            </div>
-          </div>
+</body>
 
-          <div class="swiper-slide">
-            <img
-              class="back-device"
-              src="assets/images/back-device.png"
-              alt="back-device"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-      <!--  pagination -->
-      <div class="swiper-pagination"></div>
-      <div class="arrow-buttons">
-        <img
-          class="prev-button"
-          src="assets/images/left-arrow.png"
-          alt="left arrow button"
-        />
-        <img
-          class="next-button"
-          src="assets/images/right-arrow.png"
-          alt="right arrow button"
-        />
-      </div>
-
-      <div class="container device-comment">
-        <p
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="600"
-          data-aos-offset="0"
-          data-aos-once="true"
-        >
-          Product Feature promotion mollit non deserunt ullamco est sit aliqua
-          dolzr do amet sint. Product Feature promotion mollit non deserunt
-          ullamco est sit aliqua dolor do amet sint.
-        </p>
-      </div>
-    </section>
-
-    <!-- Start of medical info-->
-
-    <section class="medical-problem-section" id="medical">
-      <div class="container">
-        <!-- background  posture image -->
-        <div class="backgroundImg">
-          <img
-            src="assets/images/white-small-logo.svg"
-            alt="white-posture-icon"
-            loading="lazy"
-          />
-        </div>
-
-        <div
-          class="row row-cols-1 row-cols-sm-1 row-cols-lg-2 justify-content-xs-center align-items-center"
-        >
-          <div class="col-lg-6 medical-prob-left">
-            <img
-              class="posture-icon animate-on-scroll"
-              src="assets/images/white-small-logo.svg"
-              alt="white-posture-icon"
-              loading="lazy"
-            />
-            <br />
-            <br />
-            <h2
-              data-aos="fade-right"
-              data-aos-easing="linear"
-              data-aos-duration="600"
-              data-aos-offset="0"
-              data-aos-once="true"
-            >
-              What is 'text neck' syndrome?
-            </h2>
-            <br />
-            <p
-              data-aos="fade-right"
-              data-aos-easing="linear"
-              data-aos-duration="600"
-              data-aos-offset="0"
-              data-aos-delay="100"
-              data-aos-once="true"
-            >
-              Mobile phones are now generally seen as being essential to our
-              daily lives, with texting the most common way of
-              <br />communicating.
-              <br />
-              <br />
-              Typically people crane their neck forward 45° degrees when sending
-              text messages. According to a Surgical Technology International
-              study, this places a weight of almost 22kg on the spine, cervical
-              ligaments and other muscles - five times the pressure considered
-              normal.
-            </p>
-            <br />
-            <div
-              data-aos="fade-zoom-in"
-              data-aos-easing="linear"
-              data-aos-offset="0"
-              data-aos-once="true"
-              data-aos-delay="200"
-            >
-              <h3>Global Mobile Sales:</h3>
-              <img
-                class="statics"
-                src="assets/images/statics.png"
-                alt="posture info"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="col-lg-6 medical-prob-right">
-            <div class="mohammed-posture-div">
-              <img
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-offset="0"
-                data-aos-once="true"
-                data-aos-delay="200"
-                class="mohammed-posture img-responsive"
-                src="assets/images/mohammed-posture.png"
-                alt="posture info"
-              />
-              <div id="mohammed-comment">
-                <p>Common Problems of exessive use of mobile phones</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="row align-items-center">
-          <div
-            class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-2 medical-sol-right"
-          >
-            <!-- background  posture image -->
-            <div class="backgroundImg">
-              <img
-                src="assets/images/white-small-logo.svg"
-                alt="white-posture-icon"
-                loading="lazy"
-              />
-            </div>
-
-            <div>
-              <img
-                class="posture-icon animate-on-scroll"
-                src="assets/images/white-small-logo.svg"
-                alt="white-posture-icon"
-              />
-            </div>
-
-            <br />
-            <h2
-              data-aos="fade-left"
-              data-aos-easing="linear"
-              data-aos-duration="600"
-              data-aos-offset="0"
-              data-aos-once="true"
-            >
-              How we solve the problem
-            </h2>
-            <br />
-            <p
-              data-aos="fade-left"
-              data-aos-easing="linear"
-              data-aos-duration="600"
-              data-aos-offset="0"
-              data-aos-delay="100"
-              data-aos-once="true"
-            >
-              Qawam corrects your posture by empowering you with alerts, data,
-              and professional support. We provide a unique, smart, and socially
-              invisible headwear add-on that can be attached easily to any
-              headgear such as Saudi Traditional Oqal, Hijab, Cap, or Glasses.
-              <br /><br />
-              Our Qawam sensor will monitor your back, and neck posture, and
-              alert you whenever you slouch or tilts your head for a long time.
-              The alert will be by mobile notification or a gentle vibration
-              from the device itself. The posture data will be saved over time,
-              and our Qawam app generates daily, weekly or monthly reports that
-              can be used by you or a medical professional to track your
-              progress.
-              <br />
-              <br />
-            </p>
-            <div id="medical-buttons">
-              <a
-                href="#App"
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-offset="0"
-                data-aos-once="true"
-                data-aos-delay="200"
-                class="btn btn-style btn-style-red"
-              >
-                Download the App
-              </a>
-              <a
-                href="notify.html"
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-offset="0"
-                data-aos-once="true"
-                data-aos-delay="250"
-                class="btn btn-style btn-style-blue"
-              >
-                Notify me
-              </a>
-            </div>
-          </div>
-          <div
-            class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-1 medical-sol-left"
-          >
-            <br />
-            <img
-              data-aos="fade-zoom-in"
-              data-aos-easing="linear"
-              data-aos-offset="0"
-              data-aos-once="true"
-              data-aos-delay="200"
-              class="man-posture"
-              src="assets/images/man-posture.png"
-              alt="posture info2"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Start of App -->
-
-    <section class="App-section" id="App">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2">
-          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-            <!-- background  posture image -->
-            <div class="backgroundImg">
-              <img
-                src="assets/images/black-small-logo.svg"
-                alt="black-posture-icon"
-              />
-            </div>
-
-            <div>
-              <img
-                class="posture-icon animate-on-scroll"
-                src="assets/images/black-small-logo.svg"
-                alt="black-posture-icon"
-              />
-            </div>
-            <br />
-
-            <h2
-              data-aos="fade-right"
-              data-aos-easing="linear"
-              data-aos-duration="600"
-              data-aos-offset="0"
-              data-aos-once="true"
-            >
-              Posture correction Qawam app
-            </h2>
-            <br />
-            <p
-              class="app-paragraph"
-              data-aos="fade-right"
-              data-aos-easing="linear"
-              data-aos-duration="600"
-              data-aos-offset="0"
-              data-aos-once="true"
-            >
-              Mollit non deserunt ullamco est sit aliqua dolor do amet sint non
-              deserunt Lorem ipsum dolor sit amet, ullamco est sit aliqua mollit
-              non deserunt ullamc
-              <br />
-            </p>
-            <div class="d-grid gap-3 d-md-flex justify-content-start">
-              <div class="buttons-app-section">
-                <a
-                  href="https://play.google.com/"
-                  class="google-play"
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="linear"
-                  data-aos-offset="0"
-                  data-aos-once="true"
-                  data-aos-delay="200"
-                >
-                  <img
-                    src="assets/images/google-play.png"
-                    alt="google play app download"
-                  />
-                </a>
-
-                <a
-                  href="https://www.apple.com/sa/app-store/"
-                  class="app-store"
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="linear"
-                  data-aos-offset="0"
-                  data-aos-once="true"
-                  data-aos-delay="250"
-                >
-                  <img
-                    src="assets/images/app-store.png"
-                    alt="app store app download"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-lg-6 col-md-12 col-sm-12 col-xs-12 align-items-center"
-          >
-            <div class="row right-section-app align-items-center">
-              <div
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-offset="0"
-                data-aos-once="true"
-                data-aos-delay="300"
-                class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
-              >
-                <img src="assets/images/thumbs-up.svg" alt="thumbs-up-icon" />
-                <br />
-                <p>
-                  Mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                </p>
-              </div>
-              <div
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-offset="0"
-                data-aos-once="true"
-                data-aos-delay="360"
-                class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
-              >
-                <img src="assets/images/thumbs-up.svg" alt="thumbs-up-icon" />
-                <br />
-                <p>
-                  Mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                </p>
-              </div>
-              <div
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-offset="0"
-                data-aos-once="true"
-                data-aos-delay="420"
-                class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
-              >
-                <img src="assets/images/thumbs-up.svg" alt="thumbs-up-icon" />
-                <br />
-                <p>
-                  Mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                </p>
-              </div>
-              <div
-                data-aos="fade-zoom-in"
-                data-aos-easing="linear"
-                data-aos-offset="0"
-                data-aos-once="true"
-                data-aos-delay="480"
-                class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
-              >
-                <img src="assets/images/thumbs-up.svg" alt="thumbs-up-icon" />
-                <br />
-                <p>
-                  Mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div
-            class="col-12 d-flex justify-content-center qawam-phone-container"
-          >
-            <img
-              data-aos="fade-zoom-in"
-              data-aos-easing="linear"
-              data-aos-offset="0"
-              data-aos-once="true"
-              data-aos-delay="200"
-              class="phone-qawam"
-              src="assets/images/phone-qawam.png"
-              alt="phone-qawam"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Start of partner logos  -->
-
-    <section class="partner-logos">
-      <div class="container">
-        <div class="wrap">
-          <!-- <h2>Our partners</h2> -->
-          <ul class="clients">
-            <li>
-              <a href="https://www.kaust.edu.sa/en"
-                ><img src="assets/images/kaust-logo.svg" alt="Kaust"
-              /></a>
-            </li>
-            <li>
-              <a href="https://misk.org.sa/en/"
-                ><img src="assets/images/misk.png" alt="misk"
-              /></a>
-            </li>
-            <li>
-              <a href=""
-                ><img
-                  src="https://webslides.tv/static/images/logos/apple.svg"
-                  alt="Apple"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.kaust.edu.sa/en"
-                ><img src="assets/images/kaust-logo.svg" alt="Kaust"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Start of about  -->
-
-    <section class="about-section">
-      <img
-        class="corner-device"
-        src="assets/images/corner-device.png"
-        alt="corner-qawam-device"
-      />
-      <div class="container">
-        <div class="row first-row-about">
-          <div class="col-lg-7 col-md-10 col-sm-12 col-xs-12">
-            <!-- background  posture image -->
-            <div class="backgroundImg">
-              <img
-                src="assets/images/white-small-logo.svg"
-                alt="white-posture-icon"
-              />
-            </div>
-
-            <div>
-              <img
-                class="posture-icon animate-on-scroll"
-                src="assets/images/white-small-logo.svg"
-                alt="black-posture-icon"
-              />
-            </div>
-            <br />
-
-            <h2
-              data-aos="fade-right"
-              data-aos-easing="linear"
-              data-aos-duration="600"
-              data-aos-offset="0"
-              data-aos-once="true"
-            >
-              Who we are
-            </h2>
-            <p
-              data-aos="fade-right"
-              data-aos-easing="linear"
-              data-aos-duration="600"
-              data-aos-offset="0"
-              data-aos-once="true"
-              data-aos-delay="100"
-            >
-              Mollit non deserunt ullamco est sit aliqua dolor do amet sint non
-              deserunt Lorem ipsum dolor sit amet, ullamco est.<br />
-              <br />
-              Together with our users, we strive to create a healthier, happier
-              world. Free of back pain and the countless other issues stemming
-              from poor back health. Feel free to email us!
-            </p>
-          </div>
-        </div>
-        <br />
-        <div class="row person-info-text">
-          <div
-            class="col-lg-4 col-md-6 col-sm-12 col-xs-12 text-align"
-            data-aos="fade-zoom-in"
-            data-aos-easing="linear"
-            data-aos-offset="0"
-            data-aos-once="true"
-            data-aos-delay="100"
-          >
-            <img src="assets/images/mohammed-about.png" alt="about-picture" />
-            <div>
-              <p>
-                For partnership and media<br />
-                <span>Contact Person Name</span> <br />
-                <span>position</span> <br />
-                <a href="mailto:pertnership@qawam.com"
-                  ><span>pertnership@qawam.com</span></a
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="col-lg-4 col-md-6 col-sm-12 col-xs-12 text-align"
-            data-aos="fade-zoom-in"
-            data-aos-easing="linear"
-            data-aos-offset="0"
-            data-aos-once="true"
-            data-aos-delay="250"
-          >
-            <img src="assets/images/mohammed-about.png" alt="about-picture" />
-            <div>
-              <p>
-                For partnership and media<br />
-                <span>Contact Person Name</span> <br />
-                <span>position</span> <br />
-                <a href="mailto:pertnership@qawam.com"
-                  ><span>pertnership@qawam.com</span></a
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="col-lg-4 col-md-12 col-sm-12 col-xs-12 text-align"
-            data-aos="fade-zoom-in"
-            data-aos-easing="linear"
-            data-aos-offset="0"
-            data-aos-once="true"
-            data-aos-delay="400"
-          >
-            <img src="assets/images/mohammed-about.png" alt="about-picture" />
-            <div>
-              <p>
-                For partnership and media<br />
-                <span>Contact Person Name</span> <br />
-                <span>position</span> <br />
-                <!-- email -->
-                <a href="mailto:pertnership@qawam.com"
-                  ><span>pertnership@qawam.com</span></a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Start of location -->
-
-    <section class="location-section">
-      <a href="https://goo.gl/maps/8PafnnsBBVc1xLUY6" target="_blank">
-        <div class="hero-image">
-          <div class="hero-text">
-            <div>
-              <img
-                src="assets/images/location-pointer.png"
-                alt="Qawam-location-pointer"
-                loading="lazy"
-              />
-            </div>
-            <p>
-              Our Address <br />
-              <span>Qawam Tech LTD,, office 1234A, Thuwal</span>
-              <br /><span>23955, Saudi Arabia</span>
-            </p>
-          </div>
-        </div>
-      </a>
-    </section>
-
-    <!-- Start of footer -->
-
-    <footer class="site-footer" id="foot">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 order-1 text-align">
-            <div class="footer-links">
-              <ul>
-                <li><a class="nav-link" href="#App">Qawam App</a></li>
-                <li><a class="nav-link" href="#device">Qawam Device</a></li>
-                <li><a class="nav-link" href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 order-2 text-align">
-            <div class="footer-links">
-              <ul class="nav-list">
-                <li>
-                  <a class="nav-link" href="#" target="_blank"
-                    >Privacy Policy</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link" href="#" target="_blank"
-                    >Terms of service</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link" href="#" target="_blank">Refund Policy</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 order-3 text-align">
-            <div class="footer-links">
-              <a
-                href="https://www.instagram.com/qawam_info/"
-                class="social-icon px-2"
-                target="_blank"
-                ><i class="fa fa-instagram"></i
-              ></a>
-              <a
-                href="https://twitter.com/qawam_info"
-                class="social-icon px-2"
-                target="_blank"
-                ><i class="fa fa-twitter"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/company/qawam"
-                class="social-icon px-2"
-                target="_blank"
-                ><i class="fa fa-linkedin"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/Qawam-111943707961859"
-                class="social-icon px-2"
-                target="_blank"
-                ><i class="fa fa-facebook-f"></i
-              ></a>
-              <div class="copyright">
-                <p>Copyrights © 2021, <span>Qawam.</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- scripts -->
-
-    <!-- bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-      defer
-    ></script>
-
-    <!-- Jquery -->
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      defer
-    ></script>
-
-    <!-- model viewer -->
-    <script
-      type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-    ></script>
-
-    <!-- font awsome -->
-    <script
-      src="https://kit.fontawesome.com/f838142837.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
-
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-
-    <!-- custom js -->
-    <script src="assets/js/script.js" defer></script>
-  </body>
 </html>

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -20,7 +19,7 @@ html {
 
   --color-primary-black: #002541;
   --color-secondary-black: #121212;
-  --color-tertiary-black: #030303;
+  --color-tertiary-black: #000000;
 
   --color-primary-red: #ff6d76;
   --color-secondary-red: #ff4d75;
@@ -82,11 +81,11 @@ section {
 
 ::-webkit-scrollbar {
   width: 16px;
-  background-color: var(--color-primary-white);
+  background-color: var(--color-primary-white) !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary-black);
+  background: var(--color-primary-black) !important;
   border-radius: 20px;
   border: 4px solid;
 }
@@ -214,43 +213,28 @@ a.btn.red-red-button:hover {
 
 #scrollup {
   position: relative;
-  width: 27px;
+  width: 20px;
   height: 80px;
 }
 
 #scrollup span {
   position: absolute;
+  left: 0;
 }
 #scrollup img {
   width: 27px;
-}
-
-#scrollup span:nth-child(1) {
-  left: 0;
-}
-
-#scrollup span:nth-child(1) img {
-  animation: scrollup 2.5s 0.6s infinite linear;
-  -webkit-animation: scrollup 2.5s 0.6s infinite linear;
+  animation: scrollup 2.5s calc(var(--order) * 200ms) infinite linear;
+  -webkit-animation: scrollup 2.5s calc(var(--order) * 200ms) infinite linear;
 }
 
 #scrollup span:nth-child(2) {
   top: 22%;
-  left: 0;
 }
 
-#scrollup span:nth-child(2) img {
-  animation: scrollup 2.5s 0.4s infinite linear;
-  -webkit-animation: scrollup 2.5s 0.4s infinite linear;
-}
 #scrollup span:nth-child(3) {
   top: 44%;
-  left: 0;
 }
-#scrollup span:nth-child(3) img {
-  animation: scrollup 2.5s 0.2s infinite linear;
-  -webkit-animation: scrollup 2.5s 0.2s infinite linear;
-}
+
 @keyframes scrollup {
   0%,
   100% {
@@ -363,7 +347,7 @@ nav li:last-child {
 }
 nav .btn.red-red-button {
   height: 40px;
-  margin: 2.5px 2.5px;
+  /* margin: 2.5px 2.5px; */
 }
 
 /* nav-toggler */
@@ -396,6 +380,13 @@ button.navbar-toggler img {
   }
 }
 
+/* mobile view */
+@media (max-width: 991px) and (min-width: 330px) {
+  .navbar {
+    position: absolute;
+  }
+}
+
 /* ================================================================== */
 /* -------------------------- header start -------------------------- */
 /* ================================================================== */
@@ -403,13 +394,12 @@ button.navbar-toggler img {
 .site-header {
   margin-top: 80px;
   background: var(--color-primary-white);
-  height: 100vh;
-  min-height: 650px;
+  height: clamp(500px, 100vh, 1500px);
 }
 
 .header-title p {
   text-align: center;
-  padding-top: 2%;
+  padding-top: 3%;
   font-size: 28px;
 }
 
@@ -432,88 +422,12 @@ button.navbar-toggler img {
 }
 
 #qawam-3d {
-  max-width: 100%;
-  width: 20rem;
+  width: clamp(10rem, 79vw, 50rem);
+  height: clamp(300px, 55vh, 900px);
   margin: 5px auto 5px auto;
 }
 
-@media screen and (max-width: 400px) {
-  @-ms-viewport {
-    width: 400px;
-  }
-
-  #qawam-3d {
-    width: 13rem;
-    height: 14rem;
-    margin: 5px auto 5px auto;
-  }
-
-  /* CSS for 320px layout goes here */
-}
-
-@media screen and (min-width: 370px) and (max-width: 640px) {
-  @-ms-viewport {
-    width: 370px;
-  }
-
-  /* CSS for 400px layout goes here */
-  #qawam-3d {
-    width: 18rem;
-    height: 20rem;
-    margin: 5px auto 5px auto;
-  }
-}
-
-@media screen and (min-width: 640px) and (max-width: 1024px) {
-  @-ms-viewport {
-    width: 640px;
-  }
-
-  /* CSS for 640px layout goes here */
-  #qawam-3d {
-    width: 22rem;
-    height: 24rem;
-    margin: 5px auto 5px auto;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
-  @-ms-viewport {
-    width: 1024px;
-  }
-
-  /* CSS for 1024px layout goes here */
-  #qawam-3d {
-    width: 25rem;
-    height: 26rem;
-    margin: 5px auto 5px auto;
-  }
-}
-
-@media screen and (min-width: 1366px) and (max-width: 1600px) {
-  @-ms-viewport {
-    width: 1366px;
-  }
-
-  /* CSS for 1024px layout goes here */
-  #qawam-3d {
-    width: 30rem;
-    height: 32rem;
-    margin: 5px auto 5px auto;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  /* CSS for 1366px layout goes here */
-
-  #qawam-3d {
-    width: 35rem;
-    height: 35rem;
-    margin: 15px auto 5px auto;
-  }
-}
-
-/* mobile view */
+/* mobile view title */
 @media (max-width: 991px) {
   .header-title p {
     font-size: 20px;
@@ -537,7 +451,8 @@ button.navbar-toggler img {
 
 .swiper {
   width: 100%;
-  height: 37rem;
+  height: 33rem;
+  margin-top: 2.2rem;
 }
 
 .swiper-wrapper {
@@ -592,15 +507,6 @@ span.swiper-pagination-bullet-active {
   margin-left: 5px;
 }
 
-.swiper-button-disabled {
-  opacity: 0.3;
-  transition: 0.5s ease-in-out;
-}
-.swiper-button-disabled:hover {
-  opacity: 0.3 !important;
-  cursor: default;
-}
-
 .arrow-buttons img {
   width: 55px;
   height: 55px;
@@ -628,7 +534,7 @@ span.swiper-pagination-bullet-active {
 
 #first-comment {
   position: absolute;
-  top: -20%;
+  top: -10%;
   left: 13%;
   width: 9.5rem;
 }
@@ -643,9 +549,9 @@ span.swiper-pagination-bullet-active {
 
 #second-comment {
   position: absolute;
-  top: 90%;
+  top: 92%;
   left: 60%;
-  width: 9.5rem;
+  width: 7.5rem;
 }
 #second-comment p {
   font-weight: 200;
@@ -741,7 +647,7 @@ span.swiper-pagination-bullet-active {
 
 @media screen and (max-width: 1470px) {
   .swiper {
-    height: 35rem;
+    height: 28rem;
   }
 
   .swiper-slide img {
@@ -749,11 +655,11 @@ span.swiper-pagination-bullet-active {
   }
 
   #first-comment {
-    top: -25%;
+    top: -15%;
     left: 15%;
   }
   #second-comment {
-    top: 92%;
+    top: 94%;
   }
 
   /*div circle style */
@@ -770,7 +676,7 @@ span.swiper-pagination-bullet-active {
 
 @media screen and (max-width: 1170px) {
   .swiper {
-    height: 32rem;
+    height: 25rem;
   }
 
   .swiper-slide img {
@@ -785,9 +691,9 @@ span.swiper-pagination-bullet-active {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 566px) {
   .swiper {
-    height: 23rem;
+    height: 20rem;
   }
 
   .swiper-slide img {
@@ -796,25 +702,26 @@ span.swiper-pagination-bullet-active {
   #first-comment p,
   #second-comment p {
     font-size: 7px;
+    font-weight: 400;
   }
   #first-comment {
-    top: -37%;
+    top: -20%;
     left: 15%;
     width: 7rem;
   }
   #second-comment {
-    top: 97%;
-    left: 60%;
-    width: 7rem;
+    top: 100%;
+    left: 57%;
+    width: 5.5rem;
   }
-  #dot-info {
+  .dot-info {
     width: 6px;
     height: 6px;
     left: 7.5px;
     top: 7px;
   }
 
-  #border-info {
+  .border-info {
     width: 1.8rem;
     height: 1.8rem;
   }
@@ -825,7 +732,7 @@ span.swiper-pagination-bullet-active {
   }
 
   .circle-size-down {
-    top: 77%;
+    top: 74%;
     left: 52%;
   }
 
@@ -881,6 +788,10 @@ span.swiper-pagination-bullet-active {
 @keyframes spin {
   0% {
     transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
   }
 
   100% {
@@ -905,7 +816,7 @@ span.swiper-pagination-bullet-active {
 }
 #mohammed-comment p {
   font-weight: 200;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 160%;
   padding: 0;
 }
@@ -937,7 +848,6 @@ span.swiper-pagination-bullet-active {
   width: 161.6px;
   padding: 5px 24px;
   height: 45px;
-  margin: 2.5px 2.5px;
   padding-top: 10px;
 }
 .btn-style-blue::before,
@@ -956,8 +866,9 @@ span.swiper-pagination-bullet-active {
   border-color: var(--color-tertiary-darkwhite);
   color: var(--color-tertiary-darkwhite);
   padding: 5px 24px;
+  width: 161.6px;
   height: 45px;
-  margin: 2.5px 2.5px;
+  margin-right: 5px;
   padding-top: 10px;
 }
 
@@ -983,6 +894,11 @@ span.swiper-pagination-bullet-active {
 .medical-sol-right {
   padding-right: 5%;
 }
+@media screen and (max-width: 992px) {
+  .mohammed-posture {
+    padding-top: 3rem;
+  }
+}
 
 @media screen and (max-width: 650px) {
   .backgroundImg img {
@@ -993,13 +909,30 @@ span.swiper-pagination-bullet-active {
   }
   .medical-problem-section h2 {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
+    padding-right: 0;
   }
   .medical-problem-section p {
     color: var(--color-primary-white);
     font-weight: 200;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 160%;
+  }
+
+  #mohammed-comment p {
+    font-size: 12px;
+  }
+
+  .btn-style {
+    font-size: 10.2px;
+    width: 145px;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 419px) {
+  .btn-style-red {
+    margin-bottom: 8px;
   }
 }
 
@@ -1019,6 +952,9 @@ span.swiper-pagination-bullet-active {
 
 .App-section h2 {
   color: var(--color-primary-black);
+  padding-right: 0 !important;
+  margin-bottom: 1rem;
+  margin-right: 0;
 }
 
 .App-section p {
@@ -1026,34 +962,17 @@ span.swiper-pagination-bullet-active {
   font-size: 14px;
   line-height: 160%;
   color: var(--color-primary-black);
+  padding-top: 20px;
 }
 
 .app-paragraph {
   padding: 0 20% 2% 0;
 }
 
-div div p {
-  padding: 3% 15% 4% 0;
-}
-
-/* .buttons-app-section .notify-button {
-  padding-right: 5px;
-}
-
-.App-section .red-red-button {
-width: 161.4px;
-}
-
-.red-red-button:hover {
-  color: var(--color-primary-white);
-  filter: brightness(95%);
-  -webkit-filter: brightness(95%);
-} */
-
 .google-play img,
 .app-store img {
   height: 45px;
-  margin: 5px 10px 5px 0;
+  margin: 20px 10px 0 0;
 }
 
 .phone-qawam {
@@ -1065,19 +984,37 @@ width: 161.4px;
   padding-bottom: 5%;
 }
 
-@media screen and (max-width: 992px) {
-  .App-section {
-    padding-bottom: 5%;
-  }
+.right-section-app div:hover {
+  border-radius: 3%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  transition: all 0.1s linear;
 }
 
-.right-section-app {
-  padding-bottom: 5%;
+.right-section-app img {
+  padding-bottom: 0.2rem;
 }
 
 .qawam-phone-container {
   overflow: visible;
   margin-bottom: -10%;
+  height: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .app-paragraph {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .google-play img,
+  .app-store img {
+    height: 40px;
+  }
+  .App-section h2 {
+    font-size: 5.2vw;
+    font-weight: 400;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1099,6 +1036,14 @@ width: 161.4px;
 .partner-logos {
   background-color: var(--color-tertiary-white);
   height: auto;
+  padding-right: 0;
+  padding-left: 0;
+
+}
+.partner-logos .row-line {
+  margin: 30px 0 30px 0;
+  border-top: var(--color-secondary-white) 1px solid;
+  width: 100%;
 }
 
 .partner-logos h2 {
@@ -1110,25 +1055,49 @@ width: 161.4px;
   width: 90%;
 }
 
+.partner-logos h6 {
+  position: absolute;
+  text-align: center;
+  width: 18rem;
+  margin-top: -15px;
+  left: calc(50% - 9rem);
+  background: var(--color-tertiary-white);
+  color: var(--color-tertiary-darkwhite);
+  font-weight: 200;
+  font-size: 18px;
+}
 .clients {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  -webkit-box-align: center;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  justify-items: center;
   margin: 4.3rem auto 1.3rem auto;
-  max-width: 1024px;
 }
 
 .clients li {
   list-style: none;
-  margin: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  width: 12vw;
+  min-width: 100px;
+  height: auto;
+  padding-right: 30px;
 }
-.clients img,
-.clients svg {
-  height: 3.2rem;
+
+
+.clients .kaust{
+  width: 75%;
+  height: auto;
+
+}
+
+.clients .misk {
+  width: 100%;
+height: auto;
+}
+
+.clients .aws {
+  width: 100%;
+  height: auto;
 }
 .clients:hover li {
   filter: blur(0px);
@@ -1147,10 +1116,10 @@ width: 161.4px;
 }
 
 @media (min-width: 1024px) {
-  .clients img,
+  /* .clients img,
   .clients svg {
     height: 6rem;
-  }
+  } */
 }
 
 /* --- Images (gray logo) --- */
@@ -1218,22 +1187,29 @@ width: 161.4px;
   -webkit-animation: MoveUpDownLong 6s ease infinite;
 }
 
-.about-section p span:nth-child(2) {
+.about-person p {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-person .name {
   font-size: 16px;
   font-weight: 600;
   color: var(--color-primary-white);
 }
 
-.about-section p span:nth-child(4) {
+/* .about-section p span:nth-child(3) {
   font-weight: 500;
   color: var(--color-secondary-white);
-}
+} */
 
 .about-section p a {
   text-decoration: underline;
   color: var(--color-secondary-blue);
 }
-
+.person-info-text p {
+  padding-top: 10px;
+}
 .person-info-text img:hover {
   filter: grayscale(100%);
   transition: all 0.2s linear;
@@ -1245,10 +1221,6 @@ width: 161.4px;
 }
 
 @media screen and (max-width: 992px) {
-  .person-info-text p {
-    padding-left: 16%;
-  }
-
   .about-section .text-align {
     text-align: center;
   }
@@ -1300,7 +1272,6 @@ width: 161.4px;
 }
 
 .hero-text p {
-  padding-left: 5.5rem;
   width: 37rem;
 }
 
@@ -1372,6 +1343,5 @@ width: 161.4px;
 
   .copyright p {
     border-top: 1px solid var(--color-secondary-white);
-    padding-left: 4.5rem;
   }
 }
